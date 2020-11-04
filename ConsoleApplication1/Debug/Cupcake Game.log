@@ -1,0 +1,4 @@
+﻿  Game.cpp
+D:\c++ projects\Cupcake Game\Cupcake Game\Game.cpp(219,22): warning C4018: '<': signed/unsigned mismatch
+D:\c++ projects\Cupcake Game\Cupcake Game\Game.cpp(234,20): warning C4018: '<': signed/unsigned mismatch
+  Cupcake Game.vcxproj -> D:\c++ projects\Cupcake Game\Debug\Cupcake Game.exe

@@ -1,0 +1,50 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Cupcake Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ConsoleApplication1.cpp
+  Cupcake.cpp
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Cupcake.cpp(11,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Cupcake.cpp(63,10): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Cupcake.cpp(104,20): warning C4018: '<': signed/unsigned mismatch
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Cupcake.cpp(127,20): warning C4018: '<': signed/unsigned mismatch
+  Draw.cpp
+  Engine.cpp
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Engine.cpp(13,44): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Engine.cpp(14,44): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Engine.cpp(16,52): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Engine.cpp(16,38): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  FrameTimer.cpp
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\FrameTimer.cpp(16,27): warning C4244: 'return': conversion from '_Rep' to 'float', possible loss of data
+          with
+          [
+              _Rep=double
+          ]
+  HUD.cpp
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\HUD.cpp(34,38): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  Input.cpp
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Input.cpp(28,21): warning C4018: '<': signed/unsigned mismatch
+E:\repos c++\ConsoleApplication1\ConsoleApplication1\Input.cpp(8,8): warning C4101: 'event': unreferenced local variable
+  Mouse.cpp
+  Player.cpp
+  TextureHolder.cpp
+  TimeBar.cpp
+  Generating Code...
+  ConsoleApplication1.vcxproj -> E:\repos c++\ConsoleApplication1\Debug\CupcakeGame.exe
