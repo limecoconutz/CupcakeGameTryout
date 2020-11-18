@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include<algorithm>
+#include <algorithm>
 
 
 #include "TextureHolder.h"
@@ -46,7 +46,7 @@ private:
 	unsigned int m_screenWidth = sf::VideoMode::getDesktopMode().width;
 
 	//How far from each other are cupcakes spawning?
-	float m_cupcakeSpawnTimerMax = 80.f;
+	const float m_cupcakeSpawnTimerMax = 80.f;
 	float m_cupcakeSpawnTimer = m_cupcakeSpawnTimerMax;
 
 	//What is the maximum number of cupcakes generated?
