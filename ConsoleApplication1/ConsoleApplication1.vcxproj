@@ -152,8 +152,6 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="FrameTimer.cpp" />
     <ClCompile Include="HUD.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="TextureHolder.cpp" />
     <ClCompile Include="TimeBar.cpp" />
