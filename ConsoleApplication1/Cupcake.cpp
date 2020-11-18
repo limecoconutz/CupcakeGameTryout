@@ -109,11 +109,11 @@ void Cupcake::move()
 
 
 
-void Cupcake::draw(sf::RenderWindow& w)
+void Cupcake::draw(sf::RenderWindow& window)
 {
-	for (Sprite& i : m_spriteVector)
+	for (Sprite& sprite : m_spriteVector)
 	{
-		w.draw(i);
+		window.draw(sprite);
 	}
 
 }
