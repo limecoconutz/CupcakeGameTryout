@@ -16,11 +16,7 @@ Cupcake::Cupcake()
 	m_maxCupcakes = 5;
 }
 
-Cupcake::~Cupcake()
-{
-
-}
-
+Cupcake::~Cupcake() = default;
 
 void Cupcake::update(sf::RenderWindow& w)
 {
