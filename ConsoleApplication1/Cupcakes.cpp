@@ -1,10 +1,10 @@
-#include "Cupcake.h"
+#include "Cupcakes.h"
 #include "Player.h"
 #include <random>
 
 
 using namespace sf;
-Cupcake::Cupcake()
+Cupcakes::Cupcakes()
 {
 	std::random_device r;
 	std::default_random_engine e(r());
@@ -15,9 +15,9 @@ Cupcake::Cupcake()
 	m_maxCupcakes = 5;
 }
 
-Cupcake::~Cupcake() = default;
+Cupcakes::~Cupcakes() = default;
 
-void Cupcake::update(sf::RenderWindow& w)
+void Cupcakes::update(sf::RenderWindow& w)
 {
 	const double dt = m_timer.Mark();
 
@@ -43,7 +43,7 @@ void Cupcake::update(sf::RenderWindow& w)
 
 
 
-void Cupcake::spawn()
+void Cupcakes::spawn()
 {  
 	Sprite m_cupcakeSprite;
 	//Set cupcake sprites origin point to be at the center 
@@ -80,7 +80,7 @@ void Cupcake::spawn()
 }
 
 
-void Cupcake::move()
+void Cupcakes::move()
 {
 
 	for (Sprite& sprite: m_spriteVector)
@@ -94,7 +94,7 @@ void Cupcake::move()
 
 
 
-void Cupcake::draw(sf::RenderWindow& window)
+void Cupcakes::draw(sf::RenderWindow& window)
 {
 	for (Sprite& sprite : m_spriteVector)
 	{
@@ -103,7 +103,7 @@ void Cupcake::draw(sf::RenderWindow& window)
 
 }
 
-void Cupcake::removeCupcake()
+void Cupcakes::removeCupcake()
 {
 	for (int i = 0; i < m_spriteVector.size(); i++)
 	{
@@ -115,7 +115,7 @@ void Cupcake::removeCupcake()
 	}
 }
 
-void Cupcake::makeCupcake(std::string textureLocation, float scale, Sprite cupcakeSprite)
+void Cupcakes::makeCupcake(std::string textureLocation, float scale, Sprite cupcakeSprite)
 {
 	float const x = (rand() % m_screenWidth);
 	cupcakeSprite = Sprite(TextureHolder::GetTexture(textureLocation));

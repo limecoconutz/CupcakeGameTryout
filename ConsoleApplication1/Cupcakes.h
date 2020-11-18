@@ -10,12 +10,12 @@
 
 
 
-class Cupcake
+class Cupcakes
 {
 public:
 	//Constructor - Destructor
-	Cupcake();
-	~Cupcake();
+	Cupcakes();
+	~Cupcakes();
 
 
 	/*void interact(sf::Window& w);*/

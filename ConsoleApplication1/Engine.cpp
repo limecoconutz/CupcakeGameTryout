@@ -21,15 +21,12 @@ Engine::Engine()
 	m_BackgroundSprite = Sprite(TextureHolder::GetTexture("Images/background.png"));
 	m_BackgroundSprite.setPosition(0, 0);
 
-
-
 }
 
 void Engine::run()
 {
 	//Timing
 	Clock clock;
-
 
 	while (m_Window.isOpen())
 	{
@@ -42,8 +39,6 @@ void Engine::run()
 
 		draw();
 	}
-
-
 
 }
 

@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "TextureHolder.h"
 #include "Player.h"
-#include "Cupcake.h"
+#include "Cupcakes.h"
 #include "FrameTimer.h"
 
 
@@ -26,7 +26,7 @@ private:
 	//Prepare the player
 	Player player;
 	//Prepare the cupcake
-	Cupcake cupcake;
+	Cupcakes cupcake;
 
 	//The usual RenderWindow
 	sf::RenderWindow m_Window;

@@ -148,7 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CupcakeGame.cpp" />
-    <ClCompile Include="Cupcake.cpp" />
+    <ClCompile Include="Cupcakes.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="FrameTimer.cpp" />
     <ClCompile Include="HUD.cpp" />
@@ -159,7 +159,7 @@
     <ClCompile Include="TimeBar.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cupcake.h" />
+    <ClInclude Include="Cupcakes.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="FrameTimer.h" />
     <ClInclude Include="HUD.h" />
