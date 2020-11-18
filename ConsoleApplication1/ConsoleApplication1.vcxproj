@@ -149,7 +149,6 @@
   <ItemGroup>
     <ClCompile Include="CupcakeGame.cpp" />
     <ClCompile Include="Cupcake.cpp" />
-    <ClCompile Include="Draw.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="FrameTimer.cpp" />
     <ClCompile Include="HUD.cpp" />
