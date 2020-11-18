@@ -9,8 +9,6 @@ Cupcake::Cupcake()
 	std::random_device r;
 	std::default_random_engine e(r());
 	std::uniform_int_distribution<int>uniform_dist(8, 9);
-	
-	m_deleted = false;
 
 	//Randomize cupcake speed
 	m_cupcakeSpeed = uniform_dist(e);

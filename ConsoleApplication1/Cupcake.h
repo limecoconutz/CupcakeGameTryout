@@ -55,9 +55,6 @@ private:
 	//How fast is the cupcake moving
 	float m_cupcakeSpeed;
 
-	//Has the cupcake been deleted?
-	bool m_deleted;
-
 	//Where is the cupcake?
 	sf::FloatRect m_bounds;
 
