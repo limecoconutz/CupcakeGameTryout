@@ -1,19 +1,19 @@
 #include "Cupcake.h"
 #include "Player.h"
+#include <random>
 
 using namespace sf;
-//Constructor - Destructor
 Cupcake::Cupcake()
 {
-	srand((int)time(0));
-
-	//Randomize cupcake speed
-	m_cupcakeSpeed = (rand() % 2) + 8;
-	m_maxCupcakes = 5;
-
-	//Initialize bool
+	std::random_device r;
+	std::default_random_engine e(r());
+	std::uniform_int_distribution<int>uniform_dist(8, 9);
+	
 	m_deleted = false;
 
+	//Randomize cupcake speed
+	m_cupcakeSpeed = uniform_dist(e);
+	m_maxCupcakes = 5;
 }
 
 Cupcake::~Cupcake()
@@ -31,28 +31,24 @@ void Cupcake::update(sf::RenderWindow& w)
 	//Update the cupcakes as per last frame
 	removeCupcake();
 
-
 	//spawn and move cupcakes
-	if (m_cupcakeSpawnTimer > m_cupcakeSpawnTimerMax)
-	{
-		spawn();
-		move();
-		m_cupcakeSpawnTimer = 1.f;
-
-	}
-	else
-	{//Give a cooldown between timer resets
-		m_cupcakeSpawnTimer += 0.1f;
-	}
-
-
+		if (m_cupcakeSpawnTimer > m_cupcakeSpawnTimerMax)
+		{
+			spawn();
+			move();
+			m_cupcakeSpawnTimer = 1.f;
+		}
+		else
+		{//Give a cooldown between timer resets
+			m_cupcakeSpawnTimer += 0.1f;
+		}
 
 }
 
 
 
 void Cupcake::spawn()
-{//How many seconds in game time have passed?
+{  //How many seconds in game time have passed?
 	FrameTimer ft;
 	const double dt = ft.Mark();
 	//Set cupcake sprites origin point to be at the center 
@@ -129,12 +125,7 @@ void Cupcake::removeCupcake()
 		if (m_spriteVector[i].getGlobalBounds().top > m_screenHeight)
 		{
 			m_spriteVector.erase(m_spriteVector.begin() + i);
-
+			i--;
 		}
 	}
 }
-
-
-
-
-
