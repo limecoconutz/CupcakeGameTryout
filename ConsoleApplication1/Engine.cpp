@@ -32,7 +32,6 @@ void Engine::run()
 
 		//Call each part of the game loop in turn
 		input();
-
 		draw();
 	}
 
@@ -58,7 +57,6 @@ void Engine::draw()
 
 void Engine::input()
 {
-	Event event;
 	updateMousePosition();
 
 	//Handle the player quitting
@@ -68,12 +66,10 @@ void Engine::input()
 
 	}
 
-	////Handle the player starting the game
-	//if (Keyboard::isKeyPressed(Keyboard::Return))
-	//{m_Playing = true;} else {m_Playing = false;}
+	////TODO: Handle the player starting the game
 
 	//Handle Mouse clicking
-	if (Mouse::isButtonPressed(Mouse::Left) && m_Playing == true)
+	if (Mouse::isButtonPressed(Mouse::Left) && m_Playing)
 	{
 
 		std::vector<sf::Sprite>& cupcakes = cupcake.m_spriteVector;
