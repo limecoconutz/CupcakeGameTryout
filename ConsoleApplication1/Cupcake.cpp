@@ -36,7 +36,7 @@ void Cupcake::update(sf::RenderWindow& w)
 		}
 		else
 		{//Give a cooldown between timer resets
-			m_cupcakeSpawnTimer += 0.1f;
+			m_cupcakeSpawnTimer += 0.4f;
 		}
 
 }
