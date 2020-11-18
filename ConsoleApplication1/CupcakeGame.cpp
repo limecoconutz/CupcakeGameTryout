@@ -5,11 +5,6 @@ sprites of cupcakes that randomly fall on the screen to gain points.
 #include<iostream>
 #include"Engine.h"
 
-
-TextureHolder th;
-
-
-
 int main()
 {
     Engine engine;
