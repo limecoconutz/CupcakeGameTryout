@@ -51,8 +51,8 @@ void Cupcake::spawn()
 	m_cupcakeSprite.setOrigin(sf::Vector2f(25.f, 25.f));
 
 	//Randomize cupcake type
-	int type = rand() % 3;
-	float x = (rand() % m_screenWidth);
+	int const type = rand() % 3;
+	float const x = (rand() % m_screenWidth);
 
 	if (m_spriteVector.size() < m_maxCupcakes)
 	{
@@ -85,7 +85,6 @@ void Cupcake::spawn()
 	{
 		m_maxCupcakes += 0.1;
 	}
-
 
 }
 
