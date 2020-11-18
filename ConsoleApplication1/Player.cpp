@@ -14,15 +14,5 @@ Player::~Player() = default;
 
 bool Player::isAlive()
 {
-	if (m_health <= 0)
-	{
-		m_dead = true;
-	}
-	else
-	{
-		m_dead = false;
-	}
-
-	return m_dead;
-
+	return m_health > 0;
 }
