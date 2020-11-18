@@ -97,11 +97,10 @@ void Cupcake::spawn()
 void Cupcake::move()
 {
 
-	for (int i = 0; i < m_spriteVector.size(); i++)
+	for (Sprite& sprite: m_spriteVector)
 	{
-		//float movingSpeed = 5.f;
 		//Move the cupcakes down
-		m_spriteVector[i].move(0.f, m_cupcakeSpeed);
+		sprite.move(0.f, m_cupcakeSpeed);
 	}
 
 }
