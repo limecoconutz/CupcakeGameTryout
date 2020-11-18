@@ -1,5 +1,6 @@
 #include "Engine.h"
 using namespace sf;
+TextureHolder th;
 
 //Public functions only here (private functions in Input.cpp, Update.cpp and Draw.cpp respectively)
 
