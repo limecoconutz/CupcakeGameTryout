@@ -47,36 +47,29 @@ void Cupcake::update(sf::RenderWindow& w)
 
 void Cupcake::spawn()
 {  
+	Sprite m_cupcakeSprite;
 	//Set cupcake sprites origin point to be at the center 
 	m_cupcakeSprite.setOrigin(sf::Vector2f(25.f, 25.f));
 
 	//Randomize cupcake type
 	int const type = rand() % 3;
-	float const x = (rand() % m_screenWidth);
+	
+	
 
 	if (m_spriteVector.size() < m_maxCupcakes)
 	{
 		switch (type)
 		{
 		case 0:
-			m_cupcakeSprite = Sprite(TextureHolder::GetTexture("Images/Cupcake1.png"));
-			m_cupcakeSprite.setScale(0.2f, 0.2f);
-			m_cupcakeSprite.setPosition(x, 0.f);
-			m_spriteVector.push_back(m_cupcakeSprite);
+			makeCupcake("Images/Cupcake1.png", 0.2f, m_cupcakeSprite);
 			break;
 
 		case 1:
-			m_cupcakeSprite = Sprite(TextureHolder::GetTexture("Images/Cupcake2.png"));
-			m_cupcakeSprite.setScale(0.2f, 0.2f);
-			m_cupcakeSprite.setPosition(x, 0.f);
-			m_spriteVector.push_back(m_cupcakeSprite);
+			makeCupcake("Images/Cupcake2.png", 0.2f, m_cupcakeSprite);
 			break;
 
 		case 2:
-			m_cupcakeSprite = Sprite(TextureHolder::GetTexture("Images/Cupcake3.png"));
-			m_cupcakeSprite.setScale(0.1f, 0.1f);
-			m_cupcakeSprite.setPosition(x, 0.f);
-			m_spriteVector.push_back(m_cupcakeSprite);
+			makeCupcake("Images/Cupcake3.png", 0.1f, m_cupcakeSprite);
 			break;
 		}
 
@@ -122,4 +115,14 @@ void Cupcake::removeCupcake()
 			i--;
 		}
 	}
+}
+
+void Cupcake::makeCupcake(std::string textureLocation, float scale, Sprite cupcakeSprite)
+{
+	float const x = (rand() % m_screenWidth);
+	cupcakeSprite = Sprite(TextureHolder::GetTexture(textureLocation));
+	cupcakeSprite.setScale(scale, scale);
+	cupcakeSprite.setPosition(x, 0.f);
+	m_spriteVector.push_back(cupcakeSprite);
+
 }

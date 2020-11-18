@@ -37,7 +37,7 @@ private:
 	void spawn();
 	void move();
 	void removeCupcake();
-
+	void makeCupcake(std::string textureLocation, float scale, sf::Sprite cupcakeSprite);
 	/*
 	Private variables
 	*/
@@ -55,8 +55,6 @@ private:
 	//How fast is the cupcake moving
 	float m_cupcakeSpeed;
 
-	//Cupcake sprite handling
-	sf::Sprite m_cupcakeSprite;
 	//Has the cupcake been deleted?
 	bool m_deleted;
 
