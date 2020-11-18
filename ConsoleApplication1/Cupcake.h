@@ -27,8 +27,6 @@ public:
 
 	//Inlined functions
 	std::vector<sf::Sprite> getSprites() { return  m_spriteVector; }
-
-
 	std::vector<sf::Sprite> m_spriteVector;
 
 private:
@@ -65,5 +63,7 @@ private:
 	//Where is the cupcake?
 	sf::FloatRect m_bounds;
 
+	//Counting the time
+	FrameTimer m_timer;
 
 };

@@ -2,6 +2,7 @@
 #include "Player.h"
 #include <random>
 
+
 using namespace sf;
 Cupcake::Cupcake()
 {
@@ -20,19 +21,20 @@ Cupcake::~Cupcake() = default;
 
 void Cupcake::update(sf::RenderWindow& w)
 {
+	const double dt = m_timer.Mark();
 
 	//Update and reset the timer for spawning cupcakes and moving them
-	m_cupcakeSpawnTimer += .3f;
+	m_cupcakeSpawnTimer += dt;
 
 	//Update the cupcakes as per last frame
 	removeCupcake();
 
 	//spawn and move cupcakes
-		if (m_cupcakeSpawnTimer > m_cupcakeSpawnTimerMax)
-		{
+		if (m_cupcakeSpawnTimer > 50.0f)
+		{ //one second passed
 			spawn();
 			move();
-			m_cupcakeSpawnTimer = 1.f;
+			m_cupcakeSpawnTimer = 0.f;
 		}
 		else
 		{//Give a cooldown between timer resets
@@ -44,9 +46,7 @@ void Cupcake::update(sf::RenderWindow& w)
 
 
 void Cupcake::spawn()
-{  //How many seconds in game time have passed?
-	FrameTimer ft;
-	const double dt = ft.Mark();
+{  
 	//Set cupcake sprites origin point to be at the center 
 	m_cupcakeSprite.setOrigin(sf::Vector2f(25.f, 25.f));
 
