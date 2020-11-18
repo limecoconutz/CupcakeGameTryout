@@ -1,6 +1,4 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include "TextureHolder.h"
 #include "Player.h"
 #include "Cupcakes.h"
 #include "FrameTimer.h"
@@ -11,10 +9,8 @@ class Engine
 public:
 	//Constructor
 	Engine();
-
 	//run all the private functions
 	void run();
-
 
 private:
 
