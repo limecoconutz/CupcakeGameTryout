@@ -26,7 +26,7 @@ void Cupcakes::update(sf::RenderWindow& w)
 	m_cupcakeSpawnTimer += dt;
 
 	//Update the cupcakes as per last frame
-	removeCupcake();
+	remove();
 
 	//spawn and move cupcakes
 		if (m_cupcakeSpawnTimer > 50.0f)
@@ -101,24 +101,14 @@ void Cupcakes::draw(sf::RenderWindow& window)
 
 }
 
-void Cupcakes::removeCupcake()
+void Cupcakes::remove()
 {
-	
 	m_spriteVector.erase(
 		std::remove_if(
 			m_spriteVector.begin(),
 			m_spriteVector.end(),
 			[=](const sf::Sprite& s) { return s.getGlobalBounds().top >= m_screenHeight; }
 	), m_spriteVector.end());
-	
-	/*for (int i = 0; i < m_spriteVector.size(); i++)
-	{
-		if (m_spriteVector[i].getGlobalBounds().top > m_screenHeight)
-		{
-			m_spriteVector.erase(m_spriteVector.begin() + i);
-			i--;
-		}
-	}*/
 }
 
 void Cupcakes::makeCupcake(std::string textureLocation, float scale, Sprite cupcakeSprite)
@@ -128,5 +118,4 @@ void Cupcakes::makeCupcake(std::string textureLocation, float scale, Sprite cupc
 	cupcakeSprite.setScale(scale, scale);
 	cupcakeSprite.setPosition(x, 0.f);
 	m_spriteVector.push_back(cupcakeSprite);
-
 }

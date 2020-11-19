@@ -36,7 +36,7 @@ private:
 	//Create and update the cupcakes
 	void spawn();
 	void move();
-	void removeCupcake();
+	void remove();
 	void makeCupcake(std::string textureLocation, float scale, sf::Sprite cupcakeSprite);
 	/*
 	Private variables
