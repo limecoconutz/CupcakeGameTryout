@@ -3,8 +3,8 @@
 using namespace std::chrono;
 
 FrameTimer::FrameTimer()
+    :last(steady_clock::now())
 {
-    last = steady_clock::now();
 }
 
 float FrameTimer::Mark()
