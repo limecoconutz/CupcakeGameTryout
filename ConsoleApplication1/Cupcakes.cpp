@@ -103,14 +103,22 @@ void Cupcakes::draw(sf::RenderWindow& window)
 
 void Cupcakes::removeCupcake()
 {
-	for (int i = 0; i < m_spriteVector.size(); i++)
+	
+	m_spriteVector.erase(
+		std::remove_if(
+			m_spriteVector.begin(),
+			m_spriteVector.end(),
+			[=](const sf::Sprite& s) { return s.getGlobalBounds().top >= m_screenHeight; }
+	), m_spriteVector.end());
+	
+	/*for (int i = 0; i < m_spriteVector.size(); i++)
 	{
 		if (m_spriteVector[i].getGlobalBounds().top > m_screenHeight)
 		{
 			m_spriteVector.erase(m_spriteVector.begin() + i);
 			i--;
 		}
-	}
+	}*/
 }
 
 void Cupcakes::makeCupcake(std::string textureLocation, float scale, Sprite cupcakeSprite)
