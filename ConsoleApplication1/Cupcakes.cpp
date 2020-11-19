@@ -53,7 +53,6 @@ void Cupcakes::spawn()
 	//Randomize cupcake type
 	int const type = rand() % 3;
 	
-	
 
 	if (m_spriteVector.size() < m_maxCupcakes)
 	{
@@ -91,8 +90,6 @@ void Cupcakes::move()
 	}
 
 }
-
-
 
 
 void Cupcakes::draw(sf::RenderWindow& window)
