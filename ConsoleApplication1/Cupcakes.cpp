@@ -5,6 +5,7 @@
 
 using namespace sf;
 Cupcakes::Cupcakes()
+	:m_maxCupcakes(5)
 {
 	std::random_device r;
 	std::default_random_engine e(r());
@@ -12,7 +13,7 @@ Cupcakes::Cupcakes()
 
 	//Randomize cupcake speed
 	m_cupcakeSpeed = uniform_dist(e);
-	m_maxCupcakes = 5;
+	
 }
 
 Cupcakes::~Cupcakes() = default;
