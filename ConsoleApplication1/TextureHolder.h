@@ -6,7 +6,7 @@
 class TextureHolder
 {
 public:
-	TextureHolder();
+	//TextureHolder();
 	static sf::Texture& GetTexture(std::string const& filename);
 
 private:
@@ -16,5 +16,5 @@ private:
 	//A pointer of the same type as the class itself 
 	//the one and only instance
 	static TextureHolder* m_s_Instance;
-
+	
 };

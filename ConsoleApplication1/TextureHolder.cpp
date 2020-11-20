@@ -1,3 +1,4 @@
+
 #include "TextureHolder.h"
 #include <assert.h>
 
@@ -14,17 +15,17 @@ TextureHolder::TextureHolder()
 
 Texture& TextureHolder::GetTexture(std::string const& filename)
 {
-	//Get a reference to m_Textures using m_s_Instance
-	auto& m = m_s_Instance->m_Textures;
+	//Get a reference to m_Textures using s_Instance
+	auto& textures = m_s_Instance->m_Textures;
 	//auto is the equivalent of map<string, Texture>
 
 	//Create an iterator to hold a key-value-pair (kvp) and search for the required kvp using the file name
-	auto keyValuePair = m.find(filename);
+	auto keyValuePair = textures.find(filename);
 	//auto is the equivalent of map<string, Texture>::iterator
 
 
 	//Did we find a match?
-	if (keyValuePair != m.end())
+	if (keyValuePair != textures.end())
 	{
 		//Yes
 		//Return the texture
@@ -34,7 +35,7 @@ Texture& TextureHolder::GetTexture(std::string const& filename)
 	{
 		//File name not found
 		//create a new kvp using the filename
-		auto& texture = m[filename];
+		auto& texture = textures[filename];
 
 		//Load the texture from file the usual way
 		texture.loadFromFile(filename);
