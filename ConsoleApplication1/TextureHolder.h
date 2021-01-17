@@ -6,7 +6,7 @@
 class TextureHolder
 {
 public:
-	//TextureHolder();
+	TextureHolder();
 	static sf::Texture& GetTexture(std::string const& filename);
 
 private:

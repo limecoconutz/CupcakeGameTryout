@@ -1,13 +1,13 @@
 /*A simple game where the player has to click on
 sprites of cupcakes that randomly fall on the screen to gain points.
 */
-#include"Engine.h"
+#include"Game.h"
 
 int main()
 {
-    Engine engine;
+    Game game;
 
-    engine.run();
+    game.run();
 
 
 
